@@ -33,7 +33,7 @@
 }
 /* Carousel Image Scaling */
 .imageFit{
-  height: 520px !important;
+  height: 420px !important;
   object-fit: cover !important;
   background-image: cover;
 }
