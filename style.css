@@ -111,14 +111,13 @@
 
 
 /* parallax Carousel styling */
-.pCarouselStyle{
+#pCarouselStyle{
   
+  background-color: rgba(255,102,102,0.4);
+  border-radius: 60px 0 60px;
   margin-top: 30px;
-  margin-left: 30px;
-  padding: 20px;
-  color:whitesmoke;
-  border-top-left-radius: 60px;
-  border-bottom-right-radius: 80px;
+  margin-left: -20px;
+  padding-left: 20px;
 }
 
 /* top arrow  */
