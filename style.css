@@ -37,7 +37,11 @@
   object-fit: cover !important;
   background-image: cover;
 }
+//carousel opacity class
 
+carouselText{
+  opacity:0;
+}
 /* For adding Margin to the Loreum text */
 .marginClass{
   margin: 20px;
