@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="margin-left: 30px;"><b
+                        style="text-shadow: 1px -1px white;">Project 1</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-end " style="margin-right: 40px;"
+                    id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#algorithm">Algorithm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#code">Python Code Compiler</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#conc">Conclusion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-5 ">
+                <div class="text-center m-3 mt-5">
+                    <img width="100%" height="180px"
+                        src="C:\Users\saikr\OneDrive\Desktop\Project1\Images\Texas-AM-University-Kingsville-logo.jpg"
+                        alt="">
+                </div>
+
+            </div>
+            <div class="col-7">
+    
+                <p class="text-center" style="font-family: calibri;">
+
+                    Department of Electrical Engineering and Computer Science<br>
+                    Texas A&M University-Kingsville<br>
+                    CSEN 5303 Foundations of Computer Science<br>
+                    Spring 2022<br>
+                    Instructor: Habib M. Ammari, Ph.D. (CSE), Ph.D. (CS)<br>
+                    Project 1: Problem Analysis, Problem Solving, and Programming<br>
+                    Due Date: Feb. 17, 2022<br>
+
+
+                    Submitted by:<br>
+                    Manideep Kusa Kid# K00497313<br>
+                    Yashwanth Reddy Patlolla Kid# K00498214<br>
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+        <div class="text-center">
+            <a href="C:\Users\saikr\OneDrive\Desktop\Project1\PDF File\PROJECT 1 FOCS.pdf" target="_blank"
+                download="project 1 report"><button type="button" class="btn  btn-outline-success"><b>Project Report</b>
+                </button></a>
+        </div>
+
+        </p>
+    </div>
+
+    <div class="m-5" id="problem statement">
+        <i>
+            <h3 class="d-flex justify-content-center text-success">Problem Statement</h3>
+        </i>
+        <div>
+            <p>
+
+            <p>1.We assume that the standard input contains a sequence of non-zero integers between - 121 and 121, which
+                ends with 0.This sequence will be given by the user
+                1.Write an algorithm, called Decomposition_Powers_Three, which produces the decomposition of each
+                integer using powers of 3,
+                1, 3, 9, 27, and 81, and the + and - operators. Each power of 3 should appear at most once in the
+                decomposition.</p>
+
+            Examples:<br>
+            <div style="padding-left: 50px;">1 = 1<br>
+                2 = 3 – 1<br>
+                3 = 3<br>
+                4 = 3 + 1<br>
+                7 = 9 – 3 + 1<br>
+                14 = 27 – 9 – 3 – 1<br>
+                43 = 81 – 27 – 9 – 3 + 1<br>
+                121 = 81 + 27 + 9 + 3 + 1<br> </div>
+
+            2.Show that the algorithm Decomposition_Powers_Three is correct using an informal proof (i.e.,
+            discussion).<br>
+            3.Give a <section id="algorithm"></section>program corresponding to Decomposition_Powers_Three, using any of
+            your favorite programming
+            language<br>
+            Observation: The intervals [-121,-41], [-40,-14], [-13,-5], [-4,-2], [-1,-1], [1,1], [2,4], [5,13],
+            [14,40], and [41,121] play a particular role,To get a better understanding of our program
+            </p>
+        </div>
+
+
+
+
+        <div>
+            <i>
+                <h3 class="d-flex justify-content-center m-3 text-success">
+
+                    Algorithm
+                </h3>
+            </i>
+            <p>
+                <br>
+                Step1: Enter the number <br>
+                Step 2: Take the input from the user and pass it as a parameter to function.<br>
+                Step 3: Subtract 1 from the number and store the value in i.<br>
+                Step 4: Use the while loop for continuous division of number.
+                Step 5: Divide the number by 3, store the remainder in x and store the quotient in i itself. If the
+                remainder is equals to 0 subtract 1 from the i.<br>
+                Step 6: Append the remainder ( x ) and quotient ( i ) to the array for each iteration of the while
+                loop.<br>
+                Step 7: Reverse the array in which remainders are stored. Let the reversed array be revrem.<br>
+                Step 8: Create an array revpow with length equal to the length of remainders array and store the powers
+                of 3 in it.<br>
+                Step 9: Run the while loop till i value is greater than 0.<br>
+                Step 10: Return revpow and revrem from the function.<br>
+                Step 10: If remrem[i] is equal to 0 take the index position and point to the same index position in
+                revpow and concatenate + to it after converting to string.<br>
+
+            <div style="padding-left: 100px;">
+                if(revrem[i]==0 ):<br>
+                <div style="padding-left: 110px;">
+                    z=i<br>
+                    resa +='+'+str(revpow[i])<br>
+                </div>
+            </div>
+
+            Step 11: If remrem[i] is equal to 1 take the index position and point to the same index position in<br>
+            revpow and concatenate - to it after converting to string.<br>
+
+            <div style="padding-left: 100px;">if(revrem[i]==1):<br>
+                <div style="padding-left: 110px;">
+                    z=i<br>
+                    resb +='-'+str(revpow[i])<br>
+                </div>
+            </div>
+            <section id="code"></section>
+            Step 12 : Add resa , resb and store in res.<br>
+            Step 13: Print res to the console.<br>
+            </p>
+        </div>
+
+        <br>
+        <br>
+        <div>
+            <i>
+                <h3 class="text-success text-center">Python Compiler</h3>
+            </i>
+            <br>
+            <div>
+                <iframe src="https://trinket.io/embed/python/4774ed237a?runOption=run&start=result" width="100%"
+                    height="750 px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+                <section id="conc"></section>
+            </div>
+        </div>
+
+        <div>
+            <br>
+            <br>
+            <i>
+                <h3 class="text-center text-success">Conclusion</h3>
+            </i>
+            <p>
+                Decomposition is the process of breaking down into simpler parts.
+                By using this project one can decompose the numbers between -121 and 121 into powers of 3.
+            </p>
+        </div>
+
+
+
+    </div>
+    <div class="bg-success h-20 text-white text-center" style="width: 100%;position: relative;bottom:-13px">
+
+        <p><b>© Foundations of Computer Science Project</b></p>
+
+    </div>
+
+</body>
+
+</html>
